@@ -25,7 +25,7 @@ class Inventory
 
   def load_cars(from_file)
     File.readlines(from_file).each do |line|
-      add_car(Inventory.from_csv(line))
+      add_car(Car.from_csv(line))
     end
   end
 end

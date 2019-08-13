@@ -2,11 +2,11 @@ require_relative 'car'
 require_relative 'inventory'
 #require_relative 'cars'
 
-car1 = Car.new("Blue", "2007", "Toyota", "Camry", 6000, 90000)
+#car1 = Car.new("Blue", "2007", "Toyota", "Camry", 6000, 90000)
 
 car_inventory = Inventory.new("Toyota")
-car_inventory.add_car(car1)
-#car_inventory.load_cars(ARGV.shift || 'cars.csv')
+#car_inventory.add_car(car1)
+car_inventory.load_cars(ARGV.shift || 'cars.csv')
 
 
 loop do
@@ -15,7 +15,7 @@ answer = gets.chomp.capitalize
 
  case answer
  when 'Toyota'
-   puts car_inventory.print_listing
+   car_inventory.print_listing
    break
  when 'Quit'
    puts "Have a nice day!"
